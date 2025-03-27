@@ -1,5 +1,29 @@
-title: minimal tactile
-description: Cayman is a clean, responsive theme for GitHub Pages.
+title: "Minimal Hacker"
+description: "Portafolio de Edwin Wilson - Desarrollador de Software"
+author: "Edwin Wilson"
 show_downloads: true
-google_analytics:
-theme: jekyll-theme-tactile
+theme: jekyll-theme-hacker
+
+# SEO & Analytics
+google_analytics: UA-XXXXXXXXX-X  # Reemplaza con tu ID de Google Analytics
+url: "https://tuusuario.github.io"  # Reemplaza con la URL de tu portafolio
+baseurl: ""  # Déjalo vacío si es tu repositorio principal
+
+# Social Media (opcional)
+github_username: tuusuario
+linkedin_username: tuusuario
+twitter_username: tuusuario
+
+# Configuración adicional
+plugins:
+  - jekyll-seo-tag  # Mejora la visibilidad en motores de búsqueda
+  - jekyll-sitemap  # Genera automáticamente un sitemap.xml
+  - jekyll-feed  # Agrega soporte para RSS
+
+# Configuración del encabezado
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - contact.md
+
