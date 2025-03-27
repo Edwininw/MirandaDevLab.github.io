@@ -6,7 +6,7 @@ theme: jekyll-theme-hacker
 
 # SEO & Analytics
 google_analytics: UA-XXXXXXXXX-X  # Reemplaza con tu ID de Google Analytics
-url: "https://tuusuario.github.io"  # Reemplaza con la URL de tu portafolio
+url: " https://edwininw.github.io/MirandaDevLab.github.io"  # Reemplaza con la URL de tu portafolio
 baseurl: ""  # Déjalo vacío si es tu repositorio principal
 
 # Social Media (opcional)
