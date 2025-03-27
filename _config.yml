@@ -4,26 +4,3 @@ author: "Edwin Wilson"
 show_downloads: true
 theme: jekyll-theme-hacker
 
-# SEO & Analytics
-google_analytics: UA-XXXXXXXXX-X  # Reemplaza con tu ID de Google Analytics
-url: " https://edwininw.github.io/MirandaDevLab.github.io"  # Reemplaza con la URL de tu portafolio
-baseurl: ""  # Déjalo vacío si es tu repositorio principal
-
-# Social Media (opcional)
-github_username: tuusuario
-linkedin_username: tuusuario
-twitter_username: tuusuario
-
-# Configuración adicional
-plugins:
-  - jekyll-seo-tag  # Mejora la visibilidad en motores de búsqueda
-  - jekyll-sitemap  # Genera automáticamente un sitemap.xml
-  - jekyll-feed  # Agrega soporte para RSS
-
-# Configuración del encabezado
-header_pages:
-  - index.md
-  - about.md
-  - projects.md
-  - contact.md
-
