@@ -42,10 +42,10 @@
         <h1>Portafolio de Edwin Wilson</h1>
         <p>Explora diferentes proyectos y portafolios:</p>
         <div class="menu">
-            <a href="https://tu-portafolio-1.com" target="_blank">Portafolio 1</a>
-            <a href="https://tu-portafolio-2.com" target="_blank">Portafolio 2</a>
-            <a href="https://tu-portafolio-3.com" target="_blank">Portafolio 3</a>
-            <a href="https://tu-portafolio-4.com" target="_blank">Portafolio 4</a>
+            <a href="https://tu-portafolio-1.com" target="_blank">Juan</a>
+            <a href="https://tu-portafolio-2.com" target="_blank">Carlos</a>
+            <a href="https://tu-portafolio-3.com" target="_blank">Juliana</a>
+            <a href="https://tu-portafolio-4.com" target="_blank">Wilson</a>
         </div>
     </div>
 </body>
