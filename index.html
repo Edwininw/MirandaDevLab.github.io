@@ -17,8 +17,8 @@
             --white: #e6f1ff;
             --green: #64ffda;
             --font-sans: 'Poppins', sans-serif;
-            --fz-xl: 20px;
-            --fz-heading: 32px;
+            --fz-xl: 16px;
+            --fz-heading: 28px;
         }
 
         *, ::before, ::after {
@@ -39,7 +39,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             text-align: center;
         }
 
@@ -51,11 +50,50 @@
         .navbar a {
             color: var(--green);
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
             font-weight: bold;
             transition: color 0.3s ease-in-out;
         }
         .navbar a:hover {
+            color: var(--white);
+        }
+
+        .menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu a {
+            color: var(--green);
+            text-decoration: none;
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .menu a:hover {
+            color: var(--white);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar a {
+            color: var(--green);
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .sidebar a:hover {
             color: var(--white);
         }
 
@@ -66,21 +104,6 @@
         .content p {
             font-size: var(--fz-xl);
             color: var(--light-slate);
-        }
-
-        .menu {
-            margin-top: 20px;
-        }
-        .menu a {
-            display: block;
-            color: var(--green);
-            text-decoration: none;
-            margin: 10px 0;
-            font-size: var(--fz-xl);
-            transition: color 0.3s ease-in-out;
-        }
-        .menu a:hover {
-            color: var(--white);
         }
 
         ::-webkit-scrollbar {
@@ -102,21 +125,30 @@
     </style>
 </head>
 <body>
+    <div class="menu">
+        <a href="https://tu-portafolio-1.com" target="_blank">Portafolio 1</a>
+        <a href="https://tu-portafolio-2.com" target="_blank">Portafolio 2</a>
+        <a href="https://tu-portafolio-3.com" target="_blank">Portafolio 3</a>
+        <a href="https://tu-portafolio-4.com" target="_blank">Portafolio 4</a>
+    </div>
     <div class="navbar">
         <a href="#about">Sobre mí</a>
         <a href="#work">Proyectos</a>
         <a href="#contact">Contacto</a>
         <a href="https://github.com/tuusuario/bookstrack" target="_blank">Bookstrack</a>
     </div>
+    <div class="sidebar">
+        <a href="#intro">Introducción</a>
+        <a href="#background">Background</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#featured-projects">Proyectos Destacados</a>
+        <a href="#other-projects">Otros Proyectos</a>
+        <a href="#footer">Footer</a>
+    </div>
     <div class="content">
         <h1>🚀 Edwin Wilson</h1>
         <p>Construyo experiencias digitales accesibles y eficientes.</p>
-    </div>
-    <div class="menu">
-        <a href="https://tu-portafolio-1.com" target="_blank">Portafolio 1</a>
-        <a href="https://tu-portafolio-2.com" target="_blank">Portafolio 2</a>
-        <a href="https://tu-portafolio-3.com" target="_blank">Portafolio 3</a>
-        <a href="https://tu-portafolio-4.com" target="_blank">Portafolio 4</a>
     </div>
 </body>
 </html>
