@@ -33,5 +33,99 @@
             flex-wrap: wrap; /* Evita que el menú se desborde */
         }
 
-        /* Est*
+        /* Estilo del logo */
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            color: #00ffcc;
+            text-shadow: 0px 0px 8px #00ffcc, 0px 0px 20px #00ffcc;
+        }
 
+        /* Menú de navegación */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Permite que el menú baje si no cabe */
+            max-width: 100%;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00ff00;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        /* Contenedor principal con espaciado corregido */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 120px 20px 50px; /* Espacio suficiente para el header */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px #00ff00, 0px 0px 25px #00ff00;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Responsive: Ajustes para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 24px;
+            }
+
+            nav ul {
+                justify-content: center;
+                padding-top: 10px;
+            }
+
+            nav ul li {
+                margin: 5px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Grupo 5</div>
+        <nav>
+            <ul>
+                <li><a href="#">Juan Carlos</a></li>
+                <li><a href="#">María José</a></li>
+                <li><a href="#">Enmnuel</a></li>
+                <li><a href="#">Carlos Cesar</a></li>
+                <li><a href="#">Edwin Miranda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Bienvenido a mi Portafolio</h1>
+        <p>Explora mis proyectos y trabajos en seguridad informática.</p>
+    </div>
+</body>
+</html>
