@@ -16,7 +16,7 @@
             text-align: center;
         }
 
-        /* Header con fondo degradado y animación */
+        /* Header con fondo fijo sin animación */
         header {
             position: fixed;
             top: 0;
@@ -25,133 +25,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 10px 20px;
             background: linear-gradient(90deg, rgba(0, 255, 0, 0.3), rgba(0, 255, 255, 0.3));
-            animation: headerGlow 3s infinite alternate;
             box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
             backdrop-filter: blur(5px);
             z-index: 1000;
+            flex-wrap: wrap; /* Evita que el menú se desborde */
         }
 
-        /* Nueva animación de "escritura digital" para el logo */
-        .logo {
-            font-size: 40px;
-            font-weight: bold;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            color: #00ffcc;
-            text-shadow: 0px 0px 8px #00ffcc, 0px 0px 20px #00ffcc;
-            overflow: hidden;
-            display: inline-block;
-        }
-        /* Animación de cortina bajando */
-        .logo span {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(-50px);
-            animation: curtainDrop 1s forwards;
-        }
-         /* Se aplica la animación a cada letra en tiempos diferentes */
-        .logo span:nth-child(1) { animation-delay: 0.1s; }
-        .logo span:nth-child(2) { animation-delay: 0.2s; }
-        .logo span:nth-child(3) { animation-delay: 0.3s; }
-        .logo span:nth-child(4) { animation-delay: 0.4s; }
-        .logo span:nth-child(5) { animation-delay: 0.5s; }
-        .logo span:nth-child(6) { animation-delay: 0.6s; }
+        /* Est*
 
-        /* Efecto de cortina */
-        @keyframes curtainDrop {
-            0% { opacity: 0; transform: translateY(-50px); }
-            50% { opacity: 0.5; transform: translateY(10px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Navegación */
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #00ff00;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: white;
-        }
-
-        /* Contenedor principal con espaciado corregido */
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 160px 20px 50px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-shadow: 0px 0px 10px #00ff00, 0px 0px 25px #00ff00;
-            animation: neonGlow 1.5s infinite alternate;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        /* Animaciones */
-
-        /* Glow en el header */
-        @keyframes headerGlow {
-            0% { background: linear-gradient(90deg, rgba(0, 255, 0, 0.3), rgba(0, 255, 255, 0.3)); }
-            100% { background: linear-gradient(90deg, rgba(0, 255, 255, 0.3), rgba(0, 255, 0, 0.3)); }
-        }
-
-        /* Efecto de escritura digital */
-        @keyframes typewriter {
-            0% { width: 0; }
-            100% { width: 100%; }
-        }
-
-        /* Glitch digital */
-        @keyframes glitch {
-            0% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
-            50% { transform: skewX(-5deg); text-shadow: 2px -2px 5px #ff00ff, -2px 2px 5px #00ffff; }
-            100% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
-        }
-
-        /* Neon Glow */
-        @keyframes neonGlow {
-            0% { text-shadow: 0px 0px 8px #00ff00, 0px 0px 20px #00ff00; }
-            100% { text-shadow: 0px 0px 15px #00ff00, 0px 0px 30px #00ff00; }
-        }
-
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo">Grupo 5</div>
-        <nav>
-            <ul>
-                <li><a href="#">Juan Carlos</a></li>
-                <li><a href="#">María José</a></li>
-                <li><a href="#">Wilson</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <h1>Bienvenido a mi Portafolio</h1>
-        <p>Explora mis proyectos y trabajos en seguridad informática.</p>
-    </div>
-</body>
-</html>
