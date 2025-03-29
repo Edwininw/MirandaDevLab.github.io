@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edwin Miranda</title>
     <style>
@@ -101,6 +103,42 @@
           margin-bottom: 10px; /* Espacio entre la imagen y el título */
         }
 
+        /* Contenedor de los iconos */
+.social-sidebar {
+    position: fixed;
+    left: 20px; /* Ajusta la posición en el costado */
+    bottom: 50px; /* Ubicación en la parte inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaciado entre iconos */
+}
+
+/* Estilos de los iconos */
+.social-sidebar a {
+    color: #00ffcc; /* Color neón */
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    color: #00ff00; /* Cambio a verde neón */
+}
+
+/* Línea decorativa debajo de los íconos */
+.vertical-line {
+    width: 2px;
+    height: 50px;
+    background-color: #00ffcc;
+    margin-top: 10px;
+}
+
+        
+
+
+        
+
 
         
 
@@ -126,6 +164,28 @@
     </style>
 </head>
 <body>
+<div class="social-sidebar">
+    <a href="https://github.com/tu-usuario" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://twitter.com/tu-usuario" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/tu-usuario" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <div class="vertical-line"></div> <!-- Línea decorativa -->
+</div>
+
+
+    
+
+
+
+    
     <header>
         <div class="logo">Grupo 5</div>
         <nav>
