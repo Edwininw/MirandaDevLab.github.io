@@ -25,28 +25,54 @@
             padding: 20px;
             background-color: rgba(0, 255, 0, 0.1);
         }
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
 .logo {
-    font-size: 28px; /* Tamaño ajustado */
+    font-size: 32px;
     font-weight: bold;
     font-family: 'Orbitron', sans-serif; /* Fuente futurista */
     color: #00ffcc; /* Azul neón */
-    text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc;
+    text-transform: uppercase;
+    position: relative;
     display: inline-block;
-    border-right: 3px solid #00ffcc; /* Cursor parpadeante */
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 3s steps(10, end) forwards, blink 0.6s infinite;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    animation: float 3s ease-in-out infinite, scanlines 0.1s infinite alternate;
+    transform-origin: center;
 }
 
-/* Animación de Brillo */
-@keyframes glow {
-    0% { text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc; }
-    50% { text-shadow: 0px 0px 10px #00ffcc, 0px 0px 20px #00ffcc; }
-    100% { text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc; }
+/* Animación de flotación */
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
 }
+
+/* Simulación de interferencia en pantalla */
+@keyframes scanlines {
+    0% { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+/* Efecto de reflejo superior */
+.logo::before {
+    content: "MI LOGO";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    color: rgba(0, 255, 204, 0.5);
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+    transform: scaleY(1.1);
+    opacity: 0.7;
+    animation: shimmer 3s linear infinite;
+}
+
+/* Destello de luz en movimiento */
+@keyframes shimmer {
+    0% { clip-path: polygon(0% 40%, 100% 30%, 100% 60%, 0% 70%); }
+    50% { clip-path: polygon(0% 30%, 100% 40%, 100% 70%, 0% 60%); }
+    100% { clip-path: polygon(0% 40%, 100% 30%, 100% 60%, 0% 70%); }
+}
+
 
         nav ul {
             list-style: none;
