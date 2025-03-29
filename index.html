@@ -9,19 +9,12 @@
 
         /* Estilos generales */
         body {
-            margin: 10px;
+            margin: 0;
             font-family: "Courier New", monospace;
             background-color: black;
             color: #00ff00; /* Verde neón */
             text-align: center;
             text-shadow: 0px 0px 5px #00ff00;
-        }
-
-        /* Animación de resplandor */
-        @keyframes glow {
-            0% { text-shadow: 0px 0px 10px #00ff00; }
-            50% { text-shadow: 0px 0px 20px #00ff00; }
-            100% { text-shadow: 0px 0px 5px #00ff00; }
         }
 
         /* Header fijo en la parte superior */
@@ -37,6 +30,7 @@
             background-color: rgba(0, 255, 0, 0.1);
             box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
             backdrop-filter: blur(5px);
+            z-index: 1000;
         }
 
         /* Logo con animaciones */
@@ -47,24 +41,6 @@
             text-transform: uppercase;
             color: #00ffcc; /* Azul verdoso neón */
             animation: glitch 1.5s infinite alternate, fadeIn 2s ease-out, float 4s infinite ease-in-out;
-        }
-
-        /* Animaciones futuristas */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px) scale(0.8); }
-            100% { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0); }
-        }
-
-        @keyframes glitch {
-            0% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
-            50% { transform: skewX(-5deg); text-shadow: 2px -2px 5px #ff00ff, -2px 2px 5px #00ffff; }
-            100% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
         }
 
         /* Navegación */
@@ -90,11 +66,42 @@
             color: white;
         }
 
-        /* Contenido principal (ajustado para evitar superposición con el header) */
+        /* Contenedor principal con espaciado corregido */
         .container {
-            padding-top: 80px; /* Evita que el header tape el contenido */
-            padding: 20px;
+            max-width: 800px; /* Limita el ancho del contenido */
+            margin: auto; /* Centra el contenido */
+            padding: 120px 20px 50px; /* Ajusta el padding para evitar que el título quede pegado */
+            text-align: center;
         }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px; /* Añade espacio debajo del título */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px) scale(0.8); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes glitch {
+            0% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
+            50% { transform: skewX(-5deg); text-shadow: 2px -2px 5px #ff00ff, -2px 2px 5px #00ffff; }
+            100% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
+        }
+
     </style>
 </head>
 <body>
