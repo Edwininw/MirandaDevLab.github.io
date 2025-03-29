@@ -51,26 +51,24 @@ body {
     animation: glitch 1.5s infinite alternate, fadeIn 2s ease-out, float 4s infinite ease-in-out;
 }
 
-/* Animación de entrada */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.5); }
-    100% { opacity: 1; transform: scale(1); }
+    0% { opacity: 0; transform: translateY(-20px) scale(0.8); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Efecto de flotación futurista */
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+/* Efecto de escaneo */
+@keyframes scanEffect {
+    0% { clip-path: polygon(0 10%, 100% 10%, 100% 15%, 0 15%); }
+    50% { clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%); }
+    100% { clip-path: polygon(0 90%, 100% 90%, 100% 95%, 0 95%); }
 }
 
 /* Glitch digital */
 @keyframes glitch {
-    0% { text-shadow: 2px 2px 5px #ff00ff, -2px -2px 5px #00ffff; }
-    50% { text-shadow: -2px -2px 5px #ff00ff, 2px 2px 5px #00ffff; }
-    100% { text-shadow: 2px -2px 5px #ff00ff, -2px 2px 5px #00ffff; }
+    0% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
+    50% { transform: skewX(-5deg); text-shadow: 2px -2px 5px #ff00ff, -2px 2px 5px #00ffff; }
+    100% { transform: skewX(5deg); text-shadow: -2px 2px 5px #ff00ff, 2px -2px 5px #00ffff; }
 }
-
         nav ul {
             list-style: none;
             margin: 0;
