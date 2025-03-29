@@ -25,12 +25,33 @@
             padding: 20px;
             background-color: rgba(0, 255, 0, 0.1);
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            font-color:white;
-            animation: glow 1.5s infinite alternate;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.logo {
+    font-size: 28px; /* Tamaño ligeramente mayor */
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif; /* Fuente moderna */
+    color: #00ffcc; /* Azul neón */
+    text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc; /* Brillo inicial */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    animation: glow 1.5s infinite alternate, spin 4s linear infinite; /* Brillo + Giro */
+    transform-origin: center;
+}
+
+/* Animación de Brillo */
+@keyframes glow {
+    0% { text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc; }
+    50% { text-shadow: 0px 0px 10px #00ffcc, 0px 0px 20px #00ffcc; }
+    100% { text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc; }
+}
+
+/* Animación de Giro */
+@keyframes spin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
         nav ul {
             list-style: none;
             margin: 0;
