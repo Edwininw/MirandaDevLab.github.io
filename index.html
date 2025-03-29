@@ -40,18 +40,14 @@
     width: 0;
     animation: typing 3s steps(10, end) forwards, blink 0.6s infinite;
 }
-
-/* Animación de escritura */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+@keyframes glitch {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-2px) skewX(-10deg); }
+    40% { transform: translateX(2px) skewX(10deg); }
+    60% { transform: translateX(-2px) skewX(-10deg); }
+    80% { transform: translateX(2px) skewX(10deg); }
+    100% { transform: translateX(0); }
 }
-
-/* Cursor parpadeante */
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
 
 /* Animación de Brillo */
 @keyframes glow {
@@ -60,11 +56,6 @@
     100% { text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #00ffcc; }
 }
 
-/* Animación de Giro */
-@keyframes spin {
-    0% { transform: rotateY(0deg); }
-    100% { transform: rotateY(360deg); }
-}
         nav ul {
             list-style: none;
             margin: 0;
