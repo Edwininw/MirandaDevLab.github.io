@@ -3,152 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Edwin Wilson</title>
+    <title>Mi Portafolio - Cybersecurity</title>
     <style>
-        :root {
-            --dark-navy: #020c1b;
-            --navy: #0a192f;
-            --light-navy: #112240;
-            --lightest-navy: #233554;
-            --dark-slate: #495670;
-            --slate: #8892b0;
-            --light-slate: #a8b2d1;
-            --lightest-slate: #ccd6f6;
-            --white: #e6f1ff;
-            --green: #64ffda;
-            --font-sans: 'Poppins', sans-serif;
-            --fz-xl: 16px;
-            --fz-heading: 28px;
-        }
-
-        *, ::before, ::after {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            width: 100%;
-            min-height: 100vh;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            background-color: var(--navy);
-            color: var(--slate);
-            font-family: var(--font-sans);
-            font-size: var(--fz-xl);
-            line-height: 1.3;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #00ff00; /* Verde neón */
             text-align: center;
         }
-
-        .navbar {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-        }
-        .navbar a {
-            color: var(--green);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-        .navbar a:hover {
-            color: var(--white);
-        }
-
-        .menu {
-            position: fixed;
-            top: 20px;
-            left: 20px;
+        header {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 255, 0, 0.1);
         }
-        .menu a {
-            color: var(--green);
-            text-decoration: none;
-            margin: 5px 0;
-            font-size: 14px;
+        .logo {
+            font-size: 24px;
             font-weight: bold;
-            transition: color 0.3s ease-in-out;
         }
-        .menu a:hover {
-            color: var(--white);
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
         }
-        .sidebar a {
-            color: var(--green);
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
             text-decoration: none;
-            margin: 10px 0;
-            font-size: 14px;
+            color: #00ff00;
             font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            transition: 0.3s;
         }
-        .sidebar a:hover {
-            color: var(--white);
+        nav ul li a:hover {
+            color: white;
         }
-
-        .content h1 {
-            font-size: var(--fz-heading);
-            margin-bottom: 10px;
-        }
-        .content p {
-            font-size: var(--fz-xl);
-            color: var(--light-slate);
-        }
-
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: var(--dark-slate);
-            border: 3px solid var(--navy);
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--navy);
-        }
-
-        ::selection {
-            background-color: var(--lightest-navy);
-            color: var(--lightest-slate);
+        .container {
+            margin-top: 100px;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="menu">
-        <a href="https://tu-portafolio-1.com" target="_blank">Portafolio 1</a>
-        <a href="https://tu-portafolio-2.com" target="_blank">Portafolio 2</a>
-        <a href="https://tu-portafolio-3.com" target="_blank">Portafolio 3</a>
-        <a href="https://tu-portafolio-4.com" target="_blank">Portafolio 4</a>
-    </div>
-    <div class="navbar">
-        <a href="#about">Sobre mí</a>
-        <a href="#work">Proyectos</a>
-        <a href="#contact">Contacto</a>
-        <a href="https://github.com/tuusuario/bookstrack" target="_blank">Bookstrack</a>
-    </div>
-    <div class="sidebar">
-        <a href="#intro">Introducción</a>
-        <a href="#background">Background</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#experience">Experiencia</a>
-        <a href="#featured-projects">Proyectos Destacados</a>
-        <a href="#other-projects">Otros Proyectos</a>
-        <a href="#footer">Footer</a>
-    </div>
-    <div class="content">
-        <h1>🚀 Edwin Wilson</h1>
-        <p>Construyo experiencias digitales accesibles y eficientes.</p>
+    <header>
+        <div class="logo">Mi Portafolio</div>
+        <nav>
+            <ul>
+                <li><a href="#">Portafolio 1</a></li>
+                <li><a href="#">Portafolio 2</a></li>
+                <li><a href="#">Portafolio 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Bienvenido a mi Portafolio de Cyberseguridad</h1>
+        <p>Explora mis proyectos y trabajos en seguridad informática.</p>
     </div>
 </body>
 </html>
+ 
