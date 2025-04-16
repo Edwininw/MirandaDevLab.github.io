@@ -281,28 +281,30 @@
 </section>
 
     <script>
-  const portafolios = [
-    { nombre: "Gisela", url: "https://gisela0711.github.io/Gisela-Web/" },
-    { nombre: "Joao", url: "https://joaovillar91.github.io/" },
-    { nombre: "Joel", url: "https://198327.github.io/Joel-Portfolio/" },
-    { nombre: "Nestor", url: "https://git-nestorvp.github.io/MiPortafolio/" },
-    { nombre: "Edwin", url: "https://edwininw.github.io/MiPortafolio.github.io/" }
-  ];
+  // Función para obtener parámetros de la URL
+  function obtenerParametroBusqueda(nombre) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(nombre);
+  }
 
-  function buscarPortafolios() {
-    const termino = document.getElementById('inputBusqueda').value.trim().toLowerCase();
+  // Función para resaltar coincidencias
+  function resaltarCoincidencias(texto) {
+    const contenido = document.body.innerHTML;
+    const regex = new RegExp(`(${texto})`, 'gi'); // Coincidencias insensibles a mayúsculas
+    const resaltado = contenido.replace(regex, '<mark style="background-color: yellow; color: black;">$1</mark>');
+    document.body.innerHTML = resaltado;
+  }
 
-    if (!termino) {
-      alert("Ingresa un término de búsqueda como 'C#' o 'Python'.");
-      return;
-    }
-
-    portafolios.forEach(p => {
-      const searchURL = `${p.url}?q=${encodeURIComponent(termino)}`;
-      window.open(searchURL, '_blank');
-    });
+  const termino = obtenerParametroBusqueda('q');
+  if (termino) {
+    setTimeout(() => {
+      resaltarCoincidencias(decodeURIComponent(termino));
+    }, 500); // Espera breve para evitar que modifique el DOM antes de tiempo
   }
 </script>
+
+
+    
 
 
     
