@@ -194,13 +194,7 @@
     
     
     <header>
-        <form id="busqueda-form" style="margin-right: 20px;">
-  <input type="text" id="termino" placeholder="Buscar en portafolios..." style="padding: 5px; font-family: monospace;">
-  <button type="submit" style="padding: 5px 10px;">Buscar</button>
-</form>
-
-
-        
+                
         <div class="logo">Grupo F</div>
         <nav>
             <ul>
@@ -280,31 +274,6 @@
 
   </div>
 </section>
-
-<script>
-  const portafolios = [
-    "https://gisela0711.github.io/Gisela-Web/",
-    "https://joaovillar91.github.io/",
-    "https://198327.github.io/Joel-Portfolio/",
-    "https://git-nestorvp.github.io/MiPortafolio/",
-    "https://edwininw.github.io/MiPortafolio.github.io/"
-  ];
-
-  document.getElementById("busqueda-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const termino = document.getElementById("termino").value.trim();
-    if (!termino) return;
-
-    portafolios.forEach(url => {
-      window.open(`${url}?q=${encodeURIComponent(termino)}`, "_blank");
-    });
-  });
-</script>
-
-
-
-    
-  
-    
+   
 </body>
 </html>
