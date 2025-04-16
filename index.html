@@ -280,28 +280,47 @@
   </div>
 </section>
 
-    <script>
-  // Función para obtener parámetros de la URL
-  function obtenerParametroBusqueda(nombre) {
-    const url = new URL(window.location.href);
-    return url.searchParams.get(nombre);
-  }
+<script>
+  const portafolios = [
+    { nombre: "Gisela", url: "https://gisela0711.github.io/Gisela-Web/" },
+    { nombre: "Joao", url: "https://joaovillar91.github.io/" },
+    { nombre: "Joel", url: "https://198327.github.io/Joel-Portfolio/" },
+    { nombre: "Nestor", url: "https://git-nestorvp.github.io/MiPortafolio/" },
+    { nombre: "Edwin", url: "https://edwininw.github.io/MiPortafolio.github.io/" }
+  ];
 
-  // Función para resaltar coincidencias
-  function resaltarCoincidencias(texto) {
-    const contenido = document.body.innerHTML;
-    const regex = new RegExp(`(${texto})`, 'gi'); // Coincidencias insensibles a mayúsculas
-    const resaltado = contenido.replace(regex, '<mark style="background-color: yellow; color: black;">$1</mark>');
-    document.body.innerHTML = resaltado;
-  }
+  function buscarPortafolios() {
+    const termino = document.getElementById('inputBusqueda').value.trim().toLowerCase();
 
-  const termino = obtenerParametroBusqueda('q');
-  if (termino) {
+    if (!termino) {
+      alert("Por favor, ingresa un término de búsqueda (ej. C#, JavaScript, etc.)");
+      return;
+    }
+
+    // Mostrar mensaje mientras se cargan
+    const mensaje = document.createElement("p");
+    mensaje.id = "mensaje-busqueda";
+    mensaje.style.color = "#00ff00";
+    mensaje.style.fontWeight = "bold";
+    mensaje.innerText = `🔍 Buscando "${termino}" en los portafolios...`;
+    document.getElementById("busqueda").appendChild(mensaje);
+
+    // Abrir cada portafolio con delay para evitar bloqueo del navegador
+    portafolios.forEach((p, index) => {
+      setTimeout(() => {
+        const searchURL = `${p.url}?q=${encodeURIComponent(termino)}`;
+        window.open(searchURL, '_blank');
+      }, index * 600); // 600 ms entre cada apertura
+    });
+
+    // Quitar mensaje luego de unos segundos
     setTimeout(() => {
-      resaltarCoincidencias(decodeURIComponent(termino));
-    }, 500); // Espera breve para evitar que modifique el DOM antes de tiempo
+      const msg = document.getElementById("mensaje-busqueda");
+      if (msg) msg.remove();
+    }, portafolios.length * 700);
   }
 </script>
+
 
 
     
